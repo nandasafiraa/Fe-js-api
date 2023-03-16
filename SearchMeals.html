@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="dist/output.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <script src="https://unpkg.com/flowbite@1.5.2/dist/flowbite.js"></script>
+    <title>Find Your Meals</title>
+</head>
+<body>
+    <!-- navbar -->
+    <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 shadow-xl sticky z-30 top-0">
+        <div class="container flex flex-wrap items-center justify-between mx-auto z-50">
+            <a href="#" class="flex items-center">
+                <img src="img/logo.svg" class="h-6 mr-3 ml-3 md:ml-0 sm:h-10" alt="Flowbite Logo" />
+                <span class="self-center text-2xl font-bold font-SourceSansPro whitespace-nowrap text-warnaLogo">FoodWagon</span>
+            </a>
+            <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-primary md:hidden" aria-controls="navbar-default" aria-expanded="false">
+                <span class="sr-only">Menu</span>
+                <svg class="w-9 h-9 fill-tombol3" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+            </button>
+            <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+                <ul class="flex flex-col p-4 mt-4 border border-gray-100 bg-warnaBg1 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white">
+                    <h3 class="text-center pb-3 md:hidden text-secondary2 text-lg font-SourceSansPro font-semibold">Menu</h3>
+                    <li>
+                        <a href="index.html" class="block py-2 pl-3 pr-4 font-SourceSansPro text-lg text-tombol3 font-semibold hover:bg-gray-100 md:hover:bg-transparent md:hover:text-tombol2 md:p-0">Home</a>
+                    </li>
+                    <li>
+                        <a href="SearchMeals.html" class="block py-2 pl-3 pr-4 font-SourceSansPro text-lg text-tombol3 font-semibold hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-tombol2 md:p-0">Meal</a>
+                    </li>
+                    <li>
+                        <a href="SearchIngredient.html" class="block py-2 pl-3 pr-4 font-SourceSansPro text-lg text-tombol3 font-semibold hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-tombol2 md:p-0">Ingredients</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- section serach ingredients-->
+    <section class="">
+        <div class=" ">
+            <!-- pencarian -->
+            <div class="flex items-center justify-center h-screen mb-12 overflow-hidden">
+
+                <div class="flex-col">
+                    <div class="relative z-30 p-5 text-2xl text-white bg-secondary3 font-SourceSansPro font-semibold leading-10 bg-opacity-40 rounded-xl md:text-5xl">
+                    Find your favorite food!
+                </div>
+
+                <div class="relative z-30 self-center pt-5 md:self-start">    
+                          <div class="flex mb-10">
+                            <label for="simple-search" class="sr-only">Ex: beef, egg, etc.</label>
+                            <div class="relative w-full">
+                                <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                                    <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg>
+                                </div>
+                                <input type="text" id="search-inputMeal" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-tombol4 focus:border-tombol4 block w-full pl-10 p-2.5" placeholder="Search" required>
+                            </div>
+                            <button type="submit" id="search-meal" class="p-2.5 ml-2 text-sm font-medium text-white bg-tombol4 rounded-lg border border-tombol5 hover:bg-tombol5 focus:ring-4 focus:outline-none focus:ring-blue-300">
+                                Search                            
+                            </button>
+                          </div>
+
+                    </div>
+
+                </div>
+
+
+                <video autoplay loop muted class="absolute z-10 w-auto min-w-full min-h-fit max-w-none">
+                    <source
+                    src="img/search-meal.mp4"
+                    type="video/mp4"/>
+                    Your browser does not support the video tag.
+                </video>
+
+            </div>
+
+            <!-- hasil pencarian -->
+            <div class="">
+                <h2 class ="font-SourceSansPro text-center text-3xl text-secondary1 font-bold leading-10 mb-10 mt-20">Your Search Results:</h2>
+                <div id="some-meal" class="mb-10">
+                    
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <script src = "script.js"></script>
+</body>
+</html>

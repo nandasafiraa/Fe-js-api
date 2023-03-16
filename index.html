@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="dist/output.css" rel="stylesheet">
+    <title>Meal DB</title>
+</head>
+<body>
+    <!-- navbar -->
+    <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 shadow-xl sticky z-30 top-0">
+        <div class="container flex flex-wrap items-center justify-between mx-auto">
+            <a href="#" class="flex items-center">
+                <img src="img/logo.svg" class="h-6 mr-3 ml-3 md:ml-0 sm:h-10" alt="Flowbite Logo" />
+                <span class="self-center text-2xl font-bold font-SourceSansPro whitespace-nowrap text-warnaLogo">FoodWagon</span>
+            </a>
+            <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-primary md:hidden" aria-controls="navbar-default" aria-expanded="false">
+                <span class="sr-only">Menu</span>
+                <svg class="w-9 h-9 fill-tombol3" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+            </button>
+            <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+                <ul class="flex flex-col p-4 mt-4 border border-gray-100 bg-warnaBg1 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white">
+                    <h3 class="text-center pb-3 md:hidden text-secondary2 text-lg font-SourceSansPro font-semibold">Menu</h3>
+                    <li>
+                        <a href="index.html" class="block py-2 pl-3 pr-4 font-SourceSansPro text-lg text-tombol3 font-semibold hover:bg-gray-100 md:hover:bg-transparent md:hover:text-tombol2 md:p-0">Home</a>
+                    </li>
+                    <li>
+                        <a href="SearchMeals.html" class="block py-2 pl-3 pr-4 font-SourceSansPro text-lg text-tombol3 font-semibold hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-tombol2 md:p-0">Meal</a>
+                    </li>
+                    <li>
+                        <a href="SearchIngredient.html" class="block py-2 pl-3 pr-4 font-SourceSansPro text-lg text-tombol3 font-semibold hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-tombol2 md:p-0">Ingredients</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <section class="bg-[url('img/bg-index.svg')] md:max-h-fit" style="background-image: url('img/bg-index2.svg');">
+        <div class="flex flex-col justify-center items-center md:mb-20">
+            <h1 class="font-SourceSansPro text-center font-bold text-6xl text-white leading-10 mt-20 mb-10 md:text-5xl">Are you ready to cook food with the best recipes?</h1>
+            <div class="md:pb-32 md:mb-32" style="margin-bottom: 32px;">
+                <!-- <button class="inline-flex items-center px-3 py-2 text-lg font-medium text-center md:pb-96 md:mb-96 text-white bg-secondary1 rounded-lg hover:bg-tombol1 focus:ring-4 focus:outline-none focus:ring-secondary4">
+                    Continue to search for food recipes
+                    <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                </button> -->
+                <a href="SearchMeals.html" class="inline-flex items-center px-3 py-2 text-lg font-medium text-center md:pb-96 md:mb-20 text-white bg-secondary1 rounded-lg hover:bg-secondary3 focus:ring-4 focus:outline-none focus:ring-secondary4">
+                    Continue to search for food recipes
+                    <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                 </a>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="">
+            <h1 class="font-SourceSansPro font-bold text-3xl text-tombol3 text-center md:mt-32 leading-10 mb-5" style="margin-top: 32px;">List all meal categories</h1>
+            <div class="divide-y-4 divide-orange-600 text-center w-14"></div>
+            <div id="category" class="p-10 grid sm:grid-cols-1 md:grid-cols-4 md:bagi gap-5">
+
+            </div>
+            <!-- <div class="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-4 gap-5">
+                <div class="flex-col bg-warnaBg1">
+                    <img class="shadow-lg rounded-full max-w-full h-auto align-middle border-none mb-8 md:mt-10 md:w-52 md:h-52" src="img/img-card.svg" alt="Gambar Detail Makanan" />
+                    <h3 class="font-SourceSansPro font-semibold text-2xl text-center my-5 text-secondary1 leading-6">Beef</h3>                
+                </div>
+                <div class="flex-col bg-secondary1">
+                    <img class="rounded-full justify-center items-center text-center mb-8 md:mt-10 md:w-52 md:h-52" src="img/img-card.svg" alt="Gambar Detail Makanan" />
+                    <h3 class="font-SourceSansPro font-semibold text-2xl text-center my-5 text-secondary1 leading-6">Beef</h3>                
+                </div>
+                <div class="flex-col bg-secondary1">
+                    <img class="rounded-full justify-center items-center text-center mb-8 md:mt-10 md:w-52 md:h-52" src="img/img-card.svg" alt="Gambar Detail Makanan" />
+                    <h3 class="font-SourceSansPro font-semibold text-2xl text-center my-5 text-secondary1 leading-6">Beef</h3>                
+                </div>
+                <div class="flex-col bg-secondary1">
+                    <img class="rounded-full justify-center items-center text-center mb-8 md:mt-10 md:w-52 md:h-52" src="img/img-card.svg" alt="Gambar Detail Makanan" />
+                    <h3 class="font-SourceSansPro font-semibold text-2xl text-center my-5 text-secondary1 leading-6">Beef</h3>                
+                </div>
+                <div class="flex-col bg-secondary1">
+                    <img class="rounded-full justify-center items-center text-center mb-8 md:mt-10 md:w-52 md:h-52" src="img/img-card.svg" alt="Gambar Detail Makanan" />
+                    <h3 class="font-SourceSansPro font-semibold text-2xl text-center my-5 text-secondary1 leading-6">Beef</h3>                
+                </div>
+                <div class="flex-col bg-secondary1">
+                    <img class="rounded-full justify-center items-center text-center mb-8 md:mt-10 md:w-52 md:h-52" src="img/img-card.svg" alt="Gambar Detail Makanan" />
+                    <h3 class="font-SourceSansPro font-semibold text-2xl text-center my-5 text-secondary1 leading-6">Beef</h3>                
+                </div>
+            </div> -->
+        </div>
+    </section>
+
+    <section class="bg-warnaBg1">
+        <h2 class ="font-SourceSansPro text-center text-3xl text-secondary1 font-bold leading-10 my-10 md:mt-20" style="padding-top: 32px;">Your Search Results:</h2>
+        <div class="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-4 gap-5">
+            <div class="max-w-sm">
+                <div class="flex flex-col justify-center items-center">
+                    <img class="rounded-t-lg md:w-10 md:h-10" src="https://www.themealdb.com/images/ingredients/Avocado.png" alt="Gambar Makanan" style="width: 75%;"/>
+                </div>
+                <div class="p-5 text-center">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-secondary2">Avocado</h5>
+                </div>
+            </div>
+            <div class="max-w-sm">
+                <div class="flex flex-col justify-center items-center">
+                    <img class="rounded-t-lg md:w-24" src="https://www.themealdb.com/images/ingredients/Baking%20Powder.png" alt="Gambar Makanan" style="width: 75%;" />
+                </div>
+                <div class="p-5 text-center">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-secondary2">Baking Powder</h5>
+                </div>
+            </div>
+            <div class="max-w-sm">
+                <div class="flex flex-col justify-center items-center">
+                    <img class="rounded-t-lg md:w-24" src="https://www.themealdb.com/images/ingredients/Bacon.png" alt="Gambar Makanan" style="width: 75%;" />
+                </div>
+                <div class="p-5 text-center">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-secondary2">Bacon</h5>
+                </div>
+            </div>
+            <div class="max-w-sm flex flex-col justify-center items-center bg-black">
+                <div class="flex flex-col justify-center items-center">
+                    <img class="rounded-t-lg md:w-24 md:h-24" src="https://www.themealdb.com/images/ingredients/Basmati%20Rice.png" alt="Gambar Makanan" style="width: 75%;" />
+                </div>
+                <a href="#">
+                </a>
+                <div class="p-5 text-center">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-secondary2">Basmati Rice</h5>
+                </div>
+            </div>
+             
+        </div>
+        <div class="flex flex-col justify-center items-center md:mb-20">
+            <div class="md:pb-20 md:mb-20" style="margin-bottom: 32px;">
+                <a href="SearchIngredient.html" class="inline-flex items-center px-3 py-2 text-lg font-medium text-center md:pb-96 md:mb-20 text-white bg-secondary1 rounded-lg hover:bg-secondary3 focus:ring-4 focus:outline-none focus:ring-secondary4">
+                Continue to search for ingredients
+                <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+            </a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const categoryContainer = document.getElementById('category');
+        fetch(`https://www.themealdb.com/api/json/v1/1/categories.php`)
+        .then(response => response.json())
+        .then(data => {
+        let html = "";
+        if(data.categories){
+            data.categories.forEach(category => {
+                html += `
+                        <div class="flex flex-col justify-center items-center rounded-full text-center">
+                            <img class="shadow-lg rounded-full max-w-full h-auto align-middle border-none mb-8 md:mt-10 md:w-1/6 md:h-1/6" src="${category.strCategoryThumb}" alt="Gambar Detail Makanan" />
+                            <h3 class="font-SourceSansPro font-semibold text-2xl text-center my-5 text-black leading-6">${category.strCategory}</h3>                
+                        </div>
+                `;
+            });
+            categoryContainer.classList.remove('notFound');
+        }else{
+            html = "Sorry, we didn't find any meal!";
+            categoryContainer.classList.add('notFound');
+        }
+
+        categoryContainer.innerHTML = html;
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+@font-face {
+  font-family: "SourceSansPro";
+  src: url("../font/SourceSansPro.ttf");
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

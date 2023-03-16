@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="dist/output.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <script src="https://unpkg.com/flowbite@1.5.2/dist/flowbite.js"></script>
+    <title>Detail Meal</title>
+</head>
+<body>
+
+    <!-- navbar -->
+    <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 shadow-xl sticky z-30 top-0">
+        <div class="container flex flex-wrap items-center justify-between mx-auto">
+            <a href="#" class="flex items-center">
+                <img src="img/logo.svg" class="h-6 mr-3 ml-3 md:ml-0 sm:h-10" alt="Flowbite Logo" />
+                <span class="self-center text-2xl font-bold font-SourceSansPro whitespace-nowrap text-warnaLogo">FoodWagon</span>
+            </a>
+            <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-primary md:hidden" aria-controls="navbar-default" aria-expanded="false">
+                <span class="sr-only">Menu</span>
+                <svg class="w-9 h-9 fill-tombol3" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+            </button>
+            <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+                <ul class="flex flex-col p-4 mt-4 border border-gray-100 bg-warnaBg1 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white">
+                    <h3 class="text-center pb-3 md:hidden text-secondary2 text-lg font-SourceSansPro font-semibold">Menu</h3>
+                    <li>
+                        <a href="index.html" class="block py-2 pl-3 pr-4 font-SourceSansPro text-lg text-tombol3 font-semibold hover:bg-gray-100 md:hover:bg-transparent md:hover:text-tombol2 md:p-0">Home</a>
+                    </li>
+                    <li>
+                        <a href="SearchMeals.html" class="block py-2 pl-3 pr-4 font-SourceSansPro text-lg text-tombol3 font-semibold hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-tombol2 md:p-0">Meal</a>
+                    </li>
+                    <li>
+                        <a href="SearchIngredient.html" class="block py-2 pl-3 pr-4 font-SourceSansPro text-lg text-tombol3 font-semibold hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-tombol2 md:p-0">Ingredients</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- section -->
+    <div class="mx-auto">
+        <div id="meal-details-content" class="md:pt-8">
+            
+        </div>
+    </div>
+    <script src = "script.js"></script>
+</body>
+</html>
